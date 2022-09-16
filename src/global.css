@@ -17,13 +17,13 @@
 
 :focus {
   outline: transparent;
-  box-shadow: 0 0 0 2px var(--purple-dark);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
 }
 
 body {
@@ -39,5 +39,6 @@ button {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
+  line-height: 140%;
   font-size: 1rem;
 }

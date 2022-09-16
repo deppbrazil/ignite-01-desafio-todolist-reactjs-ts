@@ -1,6 +1,9 @@
-import { Image } from "./style.js";
+// Style
+import { SBrand } from "./style.js";
+
+// SVG
 import todoBrand from "../../assets/brand.svg";
 
 export default function Brand() {
-  return <Image src={todoBrand} alt="ToDo logotipo" />;
+  return <SBrand src={todoBrand} alt="ToDo logotipo" />;
 }

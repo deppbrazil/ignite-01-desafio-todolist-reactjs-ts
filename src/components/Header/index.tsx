@@ -1,13 +1,16 @@
-import { HeaderContainer } from "./style.js";
+// Style
+import { SHeader } from "./style.js";
+
+// Components
 import Brand from "../Brand/index.js";
 
 export default function Header() {
   return (
-    <HeaderContainer>
+    <SHeader>
       <div>
         <Brand />
         <h1>todo</h1>
       </div>
-    </HeaderContainer>
+    </SHeader>
   );
 }
