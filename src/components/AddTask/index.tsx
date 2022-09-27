@@ -9,8 +9,16 @@ export default function AddTask() {
   return (
     <>
       <SAddTask>
-        <Input type="text" placeholder="Adicione uma nova tarefa" />
-        <Button title="Criar" isIconPlus />
+        <div className="block-wrapper">
+          <Input
+            isInputBlock
+            type="text"
+            placeholder="Adicione uma nova tarefa"
+          />
+        </div>
+        <div>
+          <Button title="Criar" isIconPlus />
+        </div>
       </SAddTask>
     </>
   );

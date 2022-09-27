@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const SWrapperButton = styled.div`
+  width: 100%;
   button {
     display: flex;
     flex-direction: row;
