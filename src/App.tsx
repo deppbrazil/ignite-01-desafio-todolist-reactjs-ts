@@ -1,17 +1,15 @@
-// Components
-import Header from "./components/Header";
-import AddTask from "./components/AddTask";
-import ListTask from "./components/ListTask";
-
 // Styles
 import "./global.css";
+
+// Components
+import Header from "./components/Header";
+import TodoList from "./components/TodoList";
 
 export function App() {
   return (
     <>
       <Header />
-      <AddTask />
-      <ListTask />
+      <TodoList />
     </>
   );
 }

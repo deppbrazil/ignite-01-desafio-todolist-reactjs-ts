@@ -1,47 +1,46 @@
-// Style
-import { SWrapperInput } from "./style.js";
+import { ChangeEventHandler, InvalidEvent } from "react";
 
-// Icon
-import { Trash } from "phosphor-react";
+// Style
+import { WrapperInput } from "./style.js";
 
 interface IInputProps {
   type: string;
+  value?: string;
   placeholder?: string;
+  required?: boolean;
   isInputBlock?: boolean;
-  content?: string;
-  value?: number;
   defaultChecked?: boolean;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
+  onInvalid?: (event: InvalidEvent<HTMLInputElement>) => void;
 }
 
 export default function Input({
   type,
-  placeholder,
-  isInputBlock,
-  content,
   value,
+  placeholder,
+  onChange,
+  required,
   defaultChecked,
+  onInvalid,
+  isInputBlock,
 }: IInputProps) {
   return (
-    <SWrapperInput>
+    <WrapperInput>
       {type === "text" && (
         <input
-          className={isInputBlock ? "input-block" : undefined}
+          className={isInputBlock ? "is-block" : undefined}
           type={type}
+          value={value}
           placeholder={placeholder}
+          onChange={onChange}
+          onInvalid={onInvalid}
+          required={required}
         />
       )}
 
       {type === "checkbox" && (
-        <div className="wrapper-item">
-          <input type={type} value={value} defaultChecked={defaultChecked} />
-          <label className={defaultChecked ? "label-checked" : undefined}>
-            {content}
-          </label>
-          <button>
-            <Trash size={16} color="#808080" />
-          </button>
-        </div>
+        <input type={type} checked={defaultChecked} onChange={onChange} />
       )}
-    </SWrapperInput>
+    </WrapperInput>
   );
 }

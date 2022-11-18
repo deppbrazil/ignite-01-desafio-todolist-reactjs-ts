@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
-export const SAddTask = styled.div`
-  width: calc(100% - 1rem);
+export const Form = styled.form`
+  width: 100%;
   max-width: 736px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 8px;
   margin: -27px auto 0 auto;
+  gap: 8px;
 
-  .block-wrapper {
-    width: 100%;
+  @media screen and (max-width: calc(736px + 1rem)) {
+    width: calc(100% - 1rem);
   }
 `;

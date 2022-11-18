@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SBrand = styled.img`
+export const WrapperBrand = styled.img`
   width: 22px;
   height: 36px;
 `;

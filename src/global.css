@@ -25,6 +25,23 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray-700);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--gray-500);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-300);
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   color: var(--gray-100);
